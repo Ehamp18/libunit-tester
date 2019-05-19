@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gnl.h                                              :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elhampto <elhampto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/10 14:48:33 by elhampto          #+#    #+#             */
-/*   Updated: 2019/05/18 21:34:45 by elhampto         ###   ########.fr       */
+/*   Created: 2019/03/26 15:24:37 by rsmith            #+#    #+#             */
+/*   Updated: 2019/05/18 21:39:11 by elhampto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GNL_H
-# define GNL_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-# include <unistd.h>
-# include <string.h>
-# include <stdlib.h>
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <fcntl.h>
-# include "libft.h"
+# include "../../libft/libft.h"
+# define BUFF_SIZE 9999
 
-// # define BUFF_SIZE 1
-# define MAX_FD 4865
+# define WRONG(x)   if (x) return (-1)
+# define DONE(x)   if (x) return (i)
+# define BREAK(x)   if (x) break
 
-int			gnl(const int fd, char **line);
+int		get_next_line(const int fd, char **line);
 
 #endif

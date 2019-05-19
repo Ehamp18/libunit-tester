@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_basic_test_1.c                                  :+:      :+:    :+:   */
+/*   02_basic_test_3.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elhampto <elhampto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 15:28:41 by elhampto          #+#    #+#             */
-/*   Updated: 2019/05/19 00:48:30 by elhampto         ###   ########.fr       */
+/*   Created: 2019/05/19 01:21:03 by elhampto          #+#    #+#             */
+/*   Updated: 2019/05/19 01:21:59 by elhampto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int			gnl_check_01(void)
 	int		fd;
 	int		fd2;
 
-	fd = open("../tests/short1", O_RDONLY);
-	fd2 = open("../tests/short1", O_RDONLY);
+	fd = open("../tests/long3", O_RDONLY);
+	fd2 = open("../tests/long3", O_RDONLY);
 	gnl(fd, &real);
 	get_next_line(fd2, &test);
 	close(fd);
@@ -34,10 +34,3 @@ int			gnl_check_01(void)
 		return (0);
 	return (-1);
 }
-/*
-int			main(void)
-{
-	printf("the answer is %d", gnl_check_01());
-	return (0);
-}
-*/
