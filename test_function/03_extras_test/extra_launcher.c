@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gnl.h                                              :+:      :+:    :+:   */
+/*   extra_launcher.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elhampto <elhampto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/10 14:48:33 by elhampto          #+#    #+#             */
-/*   Updated: 2019/05/18 21:34:45 by elhampto         ###   ########.fr       */
+/*   Created: 2019/05/19 13:59:06 by elhampto          #+#    #+#             */
+/*   Updated: 2019/05/19 14:17:21 by elhampto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GNL_H
-# define GNL_H
+#include "../../includes/libunit.h"
 
-# include <unistd.h>
-# include <string.h>
-# include <stdlib.h>
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <fcntl.h>
-# include "libft.h"
+int				extra_test_launcher(void)
+{
+	t_unit_test	*testlist;
 
-// # define BUFF_SIZE 1
-# define MAX_FD 4865
-
-int			gnl(const int fd, char **line);
-
-#endif
+	ft_putstr("get_next_line: ");
+	load_test(&testlist, "extra test 01", &gnl_extra_01);
+	load_test(&testlist, "extra test 02", &gnl_extra_02);
+	load_test(&testlist, "extra test 03", &gnl_extra_03);
+	return (launch_tests(&testlist));
+}

@@ -6,18 +6,14 @@
 /*   By: elhampto <elhampto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 15:28:41 by elhampto          #+#    #+#             */
-/*   Updated: 2019/05/19 00:49:18 by elhampto         ###   ########.fr       */
+/*   Updated: 2019/05/19 14:03:13 by elhampto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "get_next_line.h"
 
-/*
-** All the test will need to be edit, I will handle that in a few
-*/
-
-int			gnl_check_01(void)
+int			gnl_short_02(void)
 {
 	char	*real;
 	char	*test;

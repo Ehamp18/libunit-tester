@@ -6,7 +6,7 @@
 /*   By: elhampto <elhampto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 14:55:15 by elhampto          #+#    #+#             */
-/*   Updated: 2019/05/18 21:06:58 by elhampto         ###   ########.fr       */
+/*   Updated: 2019/05/19 14:09:00 by elhampto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,12 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
-# include "gnl.h"
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+
+# define BUFF_SIZE 1
+# define MAX_FD 4865
 
 /*
 ** link list

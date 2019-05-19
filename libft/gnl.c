@@ -6,11 +6,11 @@
 /*   By: elhampto <elhampto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/10 14:34:44 by elhampto          #+#    #+#             */
-/*   Updated: 2019/05/18 21:23:44 by elhampto         ###   ########.fr       */
+/*   Updated: 2019/05/19 14:09:35 by elhampto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "gnl.h"
+#include "libft.h"
 
 static char			*line_print(char *str)
 {
@@ -28,7 +28,7 @@ static char			*line_print(char *str)
 	return (prodigal);
 }
 
-static char				*new_str(char *str, char *sss)
+static char			*new_str(char *str, char *sss)
 {
 	if (str && (ft_strchr(str, '\n')))
 	{
