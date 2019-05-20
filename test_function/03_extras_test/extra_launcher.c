@@ -6,7 +6,7 @@
 /*   By: elhampto <elhampto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 13:59:06 by elhampto          #+#    #+#             */
-/*   Updated: 2019/05/19 14:17:21 by elhampto         ###   ########.fr       */
+/*   Updated: 2019/05/19 19:49:06 by elhampto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int				extra_test_launcher(void)
 {
-	t_unit_test	*testlist;
+	t_testlist	*list;
 
 	ft_putstr("get_next_line: ");
-	load_test(&testlist, "extra test 01", &gnl_extra_01);
-	load_test(&testlist, "extra test 02", &gnl_extra_02);
-	load_test(&testlist, "extra test 03", &gnl_extra_03);
-	return (launch_tests(&testlist));
+	load_test(&list, "extra test 01", &gnl_extra_01);
+	load_test(&list, "extra test 02", &gnl_extra_02);
+	load_test(&list, "extra test 03", &gnl_extra_03);
+	return (launch_tests(&list));
 }

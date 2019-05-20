@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   launcher.c                                         :+:      :+:    :+:   */
+/*   load_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elhampto <elhampto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 17:43:52 by elhampto          #+#    #+#             */
-/*   Updated: 2019/05/19 21:05:35 by elhampto         ###   ########.fr       */
+/*   Created: 2019/05/19 18:14:38 by elhampto          #+#    #+#             */
+/*   Updated: 2019/05/19 21:04:54 by elhampto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libunit.h"
 
-int				fork_call(int (*f)(void))
+t_testlist		*inital(char *na, int (*test)(void))
 {
-	pid_t		pid;
+	t_testlist	*tmp;
 
-	pid = fork();
-	if (pid < 0)
-		return (-1);
-	else if (pid == 0)
-	{
-	}
-	return (0);
+	if (!(tmp = (t_testlist*)malloc(sizeof(t_testlist))))
+		return (NULL);
+	tmp->name = na;
+	tmp->f = test;
+	tmp->next = NULL;
+	return (tmp);
 }
 
-int				luan(t_testlist *lists)
+void			load_test(t_testlist **value, char *na, int (*test)(void))
 {
-	while (lists)
+	t_testlist	*tmp;
+
+	if (*value == NULL)
+		*value = inital(na, test);
+	else
 	{
-		fork_call(lists->f);
-		lists = lists->next;
+		tmp = *value;
+		while (tmp->next)
+			tmp = tmp->next;
+		tmp->next = inital(na, test);
 	}
-	return (0);
 }

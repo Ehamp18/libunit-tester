@@ -6,12 +6,12 @@
 /*   By: elhampto <elhampto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 01:21:03 by elhampto          #+#    #+#             */
-/*   Updated: 2019/05/19 14:05:15 by elhampto         ###   ########.fr       */
+/*   Updated: 2019/05/19 17:24:09 by elhampto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "get_next_line.h"
+#include "../../includes/libunit.h"
+#include "../../get_next_line/get_next_line.h"
 
 int			gnl_long_03(void)
 {
